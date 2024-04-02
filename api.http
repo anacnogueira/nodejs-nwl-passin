@@ -2,7 +2,7 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-    "title":"NLW Unite Summit",
+    "title":"NLW Unite Summit Novo",
     "details":"Evento para quem é apaixonado por programação",
     "maximumAttendees":100
 }
