@@ -13,5 +13,10 @@ Content-Type: application/json
 
 {
     "name":"Ana Claudia Nogueira",
-    "email":"anacnogueira2@gmail.com"
+    "email":"anacnogueira3@gmail.com"
 }
+
+
+###
+GET http://localhost:3333/events/7951e93a-9757-4544-94df-ad4c203a916f
+
