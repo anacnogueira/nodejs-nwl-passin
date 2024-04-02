@@ -26,6 +26,11 @@ app.withTypeProvider<ZodTypeProvider>().post(
         details: z.string().nullable(),
         maximumAttendees: z.number().int().positive().nullable(),
       }),
+      response: {
+        201: z.object({
+          eventId: z.string().uuid(),
+        }),
+      },
     },
   },
   async (request, reply) => {
