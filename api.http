@@ -2,16 +2,16 @@ POST http://localhost:3333/events
 Content-Type: application/json
 
 {
-    "title":"NLW Unite Summit 2",
-    "details":"Evento para quem é apaixonado por programação",
-    "maximumAttendees":100
+    "title":"Festa da Ada Lovelace",
+    "details": null,
+    "maximumAttendees":1
 }
 
 ###
-POST http://localhost:3333/events/d182a9f2-5f87-47be-9215-9c5a4ae2247c/attendees
+POST http://localhost:3333/events/7951e93a-9757-4544-94df-ad4c203a916f/attendees
 Content-Type: application/json
 
 {
     "name":"Ana Claudia Nogueira",
-    "email":"anacnogueira@example.com"
+    "email":"anacnogueira2@gmail.com"
 }
