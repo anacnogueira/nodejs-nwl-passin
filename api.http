@@ -6,3 +6,12 @@ Content-Type: application/json
     "details":"Evento para quem é apaixonado por programação",
     "maximumAttendees":100
 }
+
+###
+POST http://localhost:3333/events/d182a9f2-5f87-47be-9215-9c5a4ae2247c/attendees
+Content-Type: application/json
+
+{
+    "name":"Ana Claudia Nogueira",
+    "email":"teste@example.com"
+}
