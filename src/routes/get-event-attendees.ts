@@ -46,6 +46,9 @@ export async function getEventAttendees(app: FastifyInstance) {
             },
         take: 10,
         skip: pageIndex * 10,
+        orderBy: {
+          createdAt: "desc",
+        },
       });
 
       return reply.send({
