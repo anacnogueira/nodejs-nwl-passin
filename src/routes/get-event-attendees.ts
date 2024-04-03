@@ -15,7 +15,19 @@ export async function getEventAttendees(app: FastifyInstance) {
           query: z.string().nullish(),
           pageIndex: z.string().nullish().default("0").transform(Number),
         }),
-        response: {},
+        response: {
+          200: z.object({
+            attendees: z.array(
+              z.object({
+                id: z.number(),
+                name: z.string(),
+                email: z.string().email(),
+                createdAt: z.date(),
+                checkedInAt: z.date().nullable(),
+              })
+            ),
+          }),
+        },
       },
     },
     async (request, reply) => {
@@ -58,7 +70,7 @@ export async function getEventAttendees(app: FastifyInstance) {
             name: attendee.name,
             email: attendee.email,
             createdAt: attendee.createdAt,
-            checkedInAt: attendee.checkIn?.createdAt,
+            checkedInAt: attendee.checkIn?.createdAt ?? null,
           };
         }),
       });
